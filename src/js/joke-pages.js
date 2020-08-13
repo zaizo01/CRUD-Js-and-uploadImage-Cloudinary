@@ -25,9 +25,9 @@ const events = () => {
 
     btnOtherJoke.addEventListener('click', async() => {
 
-        btnOtherJoke.disabled = true;
-        drawJoke( await getJoke() );
-        btnOtherJoke.disabled = false;
+    btnOtherJoke.disabled = true;
+    drawJoke( await getJoke() );
+    btnOtherJoke.disabled = false;
     }); 
 };
 

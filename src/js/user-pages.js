@@ -24,7 +24,6 @@ const createHtml = () => {
    const div = document.createElement('div');
    div.innerHTML = html;
    body.appendChild( div );
-
    tbody = document.querySelector('tbody');
 };
 
@@ -43,7 +42,6 @@ const createRowUser = ( user ) => {
     
     const tr = document.createElement('tr');
     tr.innerHTML = html;
-
     tbody.appendChild( tr );
 };
 
@@ -51,10 +49,6 @@ export const init = async() => {
 
     createHtml();
     correlativo = 0;
-
-    // const users = getUser();
-    // users.forEach( createRowUser() );
     (await getUser()).forEach( createRowUser );
-    // (await getUser()).forEach(createRowUser);
    
 };
